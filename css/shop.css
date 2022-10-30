@@ -116,6 +116,52 @@ nav .menu button {
   border: none;
 }
 
+nav .menu-sidebar.visible .menu-links {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+nav .menu-sidebar.visible .menu-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav .menu-links, nav .menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+nav .menu-links {
+  background-color: #0C0A3B;
+  color: var(--white);
+  padding-top: 46px;
+  width: 200px;
+  z-index: 2;
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+nav .menu-links a.menu-link {
+  display: block;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+nav .menu-overlay {
+  background-color: #0000008f;
+  z-index: 1;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
 nav h1 {
   font-size: 2.8vw;
   text-align: center;

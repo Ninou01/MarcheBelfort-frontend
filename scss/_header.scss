@@ -40,6 +40,50 @@ nav {
             color: var(--white);
             border: none
         }
+
+        &-sidebar.visible {
+
+            .menu-links {
+                transform: translateX(0);
+            }
+
+            .menu-overlay {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &-links, &-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+        &-links {
+            background-color: #0C0A3B;
+            color: var(--white);
+            padding-top: 46px;
+            width: 200px;
+            z-index: 2;
+            transform: translateX(-200px);
+            transition: transform 300ms;
+
+            a.menu-link {
+                display: block;
+                font-size: 20px;
+                padding: 20px;
+                text-align: center;
+            }
+        }
+
+        &-overlay {
+            background-color: #0000008f;
+            z-index: 1;
+            right: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 
     h1 {
