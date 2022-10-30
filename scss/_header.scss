@@ -70,10 +70,15 @@ nav {
             transition: transform 300ms;
 
             a.menu-link {
+                text-transform: capitalize;
                 display: block;
                 font-size: 20px;
                 padding: 20px;
                 text-align: center;
+
+                &:hover {
+                    background-color: #262364;
+                }
             }
         }
 

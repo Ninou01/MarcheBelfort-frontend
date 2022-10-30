@@ -22,7 +22,7 @@
 body {
   color: var(--white);
   background-color: var(--primary-color);
-  font-family: "Open Sans Light", "Open Sans";
+  font-family: 'League Spartan', sans-serif;
 }
 
 a {
@@ -43,6 +43,7 @@ a {
   background-color: var(--green);
   font-weight: bold;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .hide {
@@ -148,10 +149,15 @@ nav .menu-links {
 }
 
 nav .menu-links a.menu-link {
+  text-transform: capitalize;
   display: block;
   font-size: 20px;
   padding: 20px;
   text-align: center;
+}
+
+nav .menu-links a.menu-link:hover {
+  background-color: #262364;
 }
 
 nav .menu-overlay {
@@ -208,14 +214,28 @@ section.categorie .categorie-items {
 }
 
 section.categorie .categorie-items .item {
-  border: 2px solid black;
   text-align: center;
   width: 350px;
   margin: auto;
   padding-bottom: 10px;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 15px;
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+  -webkit-box-shadow: 0 0 7px var(--black);
+          box-shadow: 0 0 7px var(--black);
+}
+
+section.categorie .categorie-items .item:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
 }
 
 section.categorie .categorie-items .item img {
+  border-radius: 15px 15px 0 0;
   width: 100%;
 }
 
@@ -223,6 +243,7 @@ section.categorie .categorie-items .item-name {
   margin: 10px 0;
   font-size: 25px;
   font-weight: 400;
+  display: inline-block;
 }
 
 @media only screen and (max-width: 760px) {

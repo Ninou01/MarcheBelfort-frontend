@@ -20,7 +20,7 @@
 body {
     color: var(--white);
     background-color: var(--primary-color);
-    font-family: "Open Sans Light", "Open Sans";
+    font-family: 'League Spartan', sans-serif;
 }
 
 a {
@@ -42,6 +42,7 @@ a {
     background-color: var(--green);
     font-weight: bold;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .hide {
