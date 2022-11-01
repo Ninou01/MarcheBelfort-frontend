@@ -242,6 +242,9 @@ nav .logo img {
             transform-origin: top;
     opacity: 0;
   }
+  nav .menu-links .dropdown .categories-dropdown a {
+    pointer-events: none;
+  }
   nav .menu-links .dropdown.active .caret {
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg);
@@ -250,6 +253,9 @@ nav .logo img {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
+  }
+  nav .menu-links .dropdown.active .categories-dropdown a {
+    pointer-events: visible;
   }
 }
 

@@ -165,8 +165,14 @@ nav {
                     transition: transform 300ms, opacity 300ms;
                     transform-origin: top;
                     opacity: 0;
-                }
 
+                    // if you dont use this the user will be able to click on the link
+                    // when it's visiblity is hidden
+                    a {
+                        pointer-events:none;
+                    }
+                }
+                
                 &.active {
 
                     .caret {
@@ -175,6 +181,10 @@ nav {
                     .categories-dropdown  {
                         transform: translateY(0);
                         opacity: 1;
+                        
+                        a {
+                            pointer-events: visible;
+                        }
                     }
                 }
             }
