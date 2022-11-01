@@ -41,6 +41,28 @@ nav {
             border: none
         }
 
+        &-sidebar {
+            .dropdown {
+                visibility: hidden;
+                .select {
+                    padding: 10px;
+                    font-size: 20px;
+                    text-align: center;
+                    text-decoration: underline;
+                    cursor: pointer;
+
+                    .caret {
+                        border-top: 5px solid #fff;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        margin-left: 5px;
+                        display: inline-block;
+                        transition: transform 300ms;
+                    }
+                }
+            }
+        }
+
         &-sidebar.visible {
 
             .menu-links {
@@ -64,21 +86,28 @@ nav {
             background-color: #0C0A3B;
             color: var(--white);
             padding-top: 46px;
-            width: 200px;
+            width: 250px;
             z-index: 2;
-            transform: translateX(-200px);
+            transform: translateX(-250px);
             transition: transform 300ms;
-
-            a.menu-link {
-                text-transform: capitalize;
+            
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
                 display: block;
-                font-size: 20px;
-                padding: 20px;
-                text-align: center;
+                width: 10px;
+                background-color: transparent;
+            }
+        }
 
-                &:hover {
-                    background-color: #262364;
-                }
+        a.menu-link {
+            text-transform: capitalize;
+            display: block;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+
+            &:hover {
+                background-color: #262364;
             }
         }
 
@@ -104,9 +133,52 @@ nav {
 
 @media only screen and (max-width:760px) {
 
+    header {
+        .categories-liste {
+            display: none;
+        }
+    }
+
     nav {
         h1 {
             font-size: 3vw;
+        }
+
+        .menu-links {
+            &.scroll {
+    
+                &::-webkit-scrollbar {
+                    background-color: #fff;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: #ccc; 
+                    border-radius: 10px;
+                }
+            }
+
+            .dropdown {
+                visibility: visible;
+
+                .categories-dropdown  {
+                    transform: translateY(-10px);
+                    transition: transform 300ms, opacity 300ms;
+                    transform-origin: top;
+                    opacity: 0;
+                }
+
+                &.active {
+
+                    .caret {
+                        transform: rotate(-180deg);
+                    }
+                    .categories-dropdown  {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+            }
+
         }
     }
     

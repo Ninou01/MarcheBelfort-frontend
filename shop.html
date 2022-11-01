@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/shop.css">
     <title>Marche Belfort</title>
 </head>
-<body>
+<body class="preload">
     <div class="container">
         <header>
             <nav>
@@ -28,6 +28,19 @@
                             <a href="" class="menu-link">politique de confidentialité</a>
                             <a href="" class="menu-link">Politique de retour</a>
                             <a href="" class="menu-link">contactez nous</a>
+                            <div class="dropdown">
+                                <div class="select">
+                                    <span class="selected">categories</span>
+                                    <div class="caret"></div>
+                                </div>
+                                <ul class="categories-dropdown">
+                                    <li><a href="#" class="menu-link">Telephone</a></li>
+                                    <li><a href="#" class="menu-link">ordinateur</a></li>
+                                    <li><a href="#" class="menu-link">console</a></li>
+                                    <li><a href="#" class="menu-link">Accessoir mobile</a></li>
+                                    <li><a href="#" class="menu-link">Tablets</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="menu-overlay"></div>
                     </div>
@@ -178,5 +191,17 @@
 
     <script src="js/main.js"></script>
     <script src="js/sidebar-menu.js"></script>
+
+    <script>
+        let menuLinks = document.getElementsByClassName("menu-links")[0]
+        let dropdown = document.getElementsByClassName("dropdown")[0]
+        let select = dropdown.querySelector(".select")
+
+        select.addEventListener("click", () => {
+            dropdown.classList.toggle("active")
+            menuLinks.classList.toggle("scroll")
+        })
+        
+    </script>
 </body>
 </html>

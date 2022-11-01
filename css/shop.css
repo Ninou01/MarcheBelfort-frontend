@@ -25,6 +25,11 @@ body {
   font-family: 'League Spartan', sans-serif;
 }
 
+.preload {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -117,6 +122,30 @@ nav .menu button {
   border: none;
 }
 
+nav .menu-sidebar .dropdown {
+  visibility: hidden;
+}
+
+nav .menu-sidebar .dropdown .select {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+nav .menu-sidebar .dropdown .select .caret {
+  border-top: 5px solid #fff;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  margin-left: 5px;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
 nav .menu-sidebar.visible .menu-links {
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -138,17 +167,24 @@ nav .menu-links {
   background-color: #0C0A3B;
   color: var(--white);
   padding-top: 46px;
-  width: 200px;
+  width: 250px;
   z-index: 2;
-  -webkit-transform: translateX(-200px);
-          transform: translateX(-200px);
+  -webkit-transform: translateX(-250px);
+          transform: translateX(-250px);
   -webkit-transition: -webkit-transform 300ms;
   transition: -webkit-transform 300ms;
   transition: transform 300ms;
   transition: transform 300ms, -webkit-transform 300ms;
+  overflow-y: scroll;
 }
 
-nav .menu-links a.menu-link {
+nav .menu-links::-webkit-scrollbar {
+  display: block;
+  width: 10px;
+  background-color: transparent;
+}
+
+nav .menu a.menu-link {
   text-transform: capitalize;
   display: block;
   font-size: 20px;
@@ -156,7 +192,7 @@ nav .menu-links a.menu-link {
   text-align: center;
 }
 
-nav .menu-links a.menu-link:hover {
+nav .menu a.menu-link:hover {
   background-color: #262364;
 }
 
@@ -179,8 +215,41 @@ nav .logo img {
 }
 
 @media only screen and (max-width: 760px) {
+  header .categories-liste {
+    display: none;
+  }
   nav h1 {
     font-size: 3vw;
+  }
+  nav .menu-links.scroll::-webkit-scrollbar {
+    background-color: #fff;
+  }
+  nav .menu-links.scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+  }
+  nav .menu-links .dropdown {
+    visibility: visible;
+  }
+  nav .menu-links .dropdown .categories-dropdown {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+    transition: opacity 300ms, -webkit-transform 300ms;
+    transition: transform 300ms, opacity 300ms;
+    transition: transform 300ms, opacity 300ms, -webkit-transform 300ms;
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  nav .menu-links .dropdown.active .caret {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  nav .menu-links .dropdown.active .categories-dropdown {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 

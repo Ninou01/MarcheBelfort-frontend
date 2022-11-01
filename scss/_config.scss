@@ -23,6 +23,10 @@ body {
     font-family: 'League Spartan', sans-serif;
 }
 
+.preload {
+    transition: none !important; 
+}
+
 a {
     text-decoration: none;
     color: inherit;
