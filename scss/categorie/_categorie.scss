@@ -1,0 +1,19 @@
+.categorie-title {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: var(--mg-bottom);
+} 
+
+.categorie-items {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px 5%;
+}
+
+@media only screen and (max-width:760px) {
+
+    .categorie-items {
+        grid-template-columns: 1fr;
+    }
+    
+}

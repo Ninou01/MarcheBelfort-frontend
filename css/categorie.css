@@ -293,41 +293,23 @@ nav .logo img {
   display: inline-block;
 }
 
-.banniere {
-  height: 200px;
-  margin-bottom: var(--mg-bottom);
-}
-
-.banniere-desktop, .banniere-mobile {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-section.categorie {
-  margin-bottom: var(--mg-bottom);
-}
-
-section.categorie .categorie-title {
+.categorie-title {
   font-size: 3.5rem;
   text-align: center;
   margin-bottom: var(--mg-bottom);
 }
 
-section.categorie .categorie-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
+.categorie-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 50px 5%;
 }
 
 @media only screen and (max-width: 760px) {
   .categorie-items {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .banniere {
-    height: 150px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }

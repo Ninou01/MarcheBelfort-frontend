@@ -1,0 +1,28 @@
+.item {
+    text-align: center;
+    width: auto;
+    max-width: 350px;
+    margin: auto;
+    padding-bottom: 10px;
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 15px;
+    transition: transform 300ms;
+    box-shadow: 0 0 7px var(--black);
+
+    &:hover {
+        transform: scale(1.04);
+    }
+    
+    img {
+        border-radius: 15px 15px 0 0;
+        width: 100%;
+    }
+
+    &-name {
+        margin: 10px 0;
+        font-size: 25px;
+        font-weight: 400;
+        display: inline-block;
+    }
+}
