@@ -259,61 +259,169 @@ nav .logo img {
   }
 }
 
-.item {
+section {
+  margin-bottom: 200px;
+}
+
+.produit-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.produit-box-left {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
   text-align: center;
+}
+
+.produit-box-left .produit-title {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.produit-box-left .poduit-images .image-to-show > img {
+  width: 80%;
+}
+
+.produit-box-right {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.produit-box-right .produit-price {
+  color: var(--green);
+  font-size: 55px;
+  margin: 50px 0px;
+}
+
+.produit-box-right .produit-price::after {
+  content: "DA";
+}
+
+.produit-box-right .produit-descriptions .produit-description-1,
+.produit-box-right .produit-descriptions .produit-description-2 {
+  margin-bottom: var(--mg-bottom);
+}
+
+.produit-box-right .produit-descriptions .produit-description-1 {
+  font-size: 30px;
+}
+
+.produit-box-right .produit-descriptions .produit-description-2 {
+  line-height: 20px;
+}
+
+.formulaire {
+  margin-left: auto;
   width: auto;
-  max-width: 350px;
-  margin: auto;
-  padding-bottom: 10px;
-  background-color: var(--white);
-  color: var(--black);
-  border-radius: 15px;
-  -webkit-transition: -webkit-transform 300ms;
-  transition: -webkit-transform 300ms;
-  transition: transform 300ms;
-  transition: transform 300ms, -webkit-transform 300ms;
-  -webkit-box-shadow: 0 0 7px var(--black);
-          box-shadow: 0 0 7px var(--black);
+  max-width: 680px;
 }
 
-.item:hover {
-  -webkit-transform: scale(1.04);
-          transform: scale(1.04);
+.formulaire input {
+  border: none;
+  outline: none;
 }
 
-.item img {
-  border-radius: 15px 15px 0 0;
-  width: 100%;
+.formulaire input[type="text"],
+.formulaire input[type="number"],
+.formulaire .adresse,
+.formulaire .total-price {
+  margin-bottom: 15px;
 }
 
-.item-name {
-  margin: 10px 0;
+.formulaire input[type="text"] {
+  display: block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: 500px;
+  font-size: 16px;
+}
+
+.formulaire label, .formulaire .total-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.formulaire select {
+  width: 155px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+.formulaire select[name="wilaya"] {
+  margin-right: 10px;
+}
+
+.formulaire input[type="number"] {
+  width: 60px;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.formulaire input[type=number]::-webkit-inner-spin-button,
+.formulaire input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+.formulaire .total-price {
+  font-size: 30px;
+}
+
+.formulaire .total-price span {
+  color: var(--green);
+}
+
+.formulaire .total-price span::after {
+  content: "DA";
+}
+
+.formulaire button[type="submit"] {
+  background-color: var(--green);
+  font-weight: bold;
   font-size: 25px;
-  font-weight: 400;
-  display: inline-block;
+  padding: 10px 40px;
+  width: 280px;
+  text-align: start;
+  border-radius: 21px;
+  cursor: pointer;
+  border: none;
 }
 
-.categorie {
-  margin-bottom: var(--mg-bottom);
+.formulaire .errors-box {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  color: red;
+  background: #ffffff;
+  padding: 10px;
+  max-width: 300px;
+  display: none;
 }
 
-.categorie-title {
-  font-size: 3.5rem;
-  text-align: center;
-  margin-bottom: var(--mg-bottom);
+.formulaire .errors-box.visible {
+  display: block;
 }
 
-.categorie-items {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  gap: 50px 5%;
+.formulaire .errors-box li {
+  list-style-type: disc;
+  list-style-position: inside;
 }
 
 @media only screen and (max-width: 760px) {
-  .categorie-items {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+  .produit-box {
+    display: block;
+  }
+  .formulaire {
+    margin: auto;
+    max-width: auto;
+  }
+  .formulaire input[type="text"] {
+    width: 320px;
+  }
+  .formulaire select[name="wilaya"] {
+    margin-right: 50px;
+    margin-bottom: 15px;
   }
 }

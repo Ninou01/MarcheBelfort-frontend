@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/produit.css">
+    <title>Marche Belfort</title>
+</head>
+<body class="preload">
+    <div class="container">
+        <header>
+            <nav>
+                <div class="menu">
+                    <button><i class="fa-solid fa-bars"></i></button>
+                    <div class="menu-sidebar">
+                        <div class="menu-links">
+                            <a href="" class="menu-link">page principale</a>
+                            <a href="" class="menu-link">politique de confidentialité</a>
+                            <a href="" class="menu-link">Politique de retour</a>
+                            <a href="" class="menu-link">contactez nous</a>
+                            <div class="dropdown">
+                                <div class="select">
+                                    <span class="selected">categories</span>
+                                    <div class="caret"></div>
+                                </div>
+                                <ul class="categories-dropdown">
+                                    <li><a href="#" class="menu-link">Telephone</a></li>
+                                    <li><a href="#" class="menu-link">ordinateur</a></li>
+                                    <li><a href="#" class="menu-link">console</a></li>
+                                    <li><a href="#" class="menu-link">Accessoir mobile</a></li>
+                                    <li><a href="#" class="menu-link">Tablets</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="menu-overlay"></div>
+                    </div>
+                </div>
+                <h1>
+                    première platforme de e-commerce specialisé en telephone
+                </h1>
+                <div class="logo">
+                    <a href="#"><img src="images/logo.jpg" alt="logo"></a>
+                </div>
+            </nav>
+            <div class="categories-liste">
+                <ul>
+                    <li><a href="#">Telephone</a></li>
+                    <li><a href="#">ordinateur</a></li>
+                    <li><a href="#">console</a></li>
+                    <li><a href="#">Accessoir mobile</a></li>
+                    <li><a href="#">Tablets</a></li>
+                </ul>
+            </div>
+        </header>
+        
+        <section class="produit">
+            <div class="produit-box">
+                <div class="produit-box-left">
+                    <h3 class="produit-title">
+                        TITRE DE PRODUIT 
+                    </h3>
+                    <div class="poduit-images">
+                        <div class="image-to-show">
+                            <img src="images/item.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produit-box-right">
+                    <h2 class="produit-price">2200</h2>
+                    <div class="produit-descriptions">
+                        <p class="produit-description-1">
+                            Il s'agit d'une citation de deux lignes
+                            pour une page d'accueil de site Web.
+                        </p>
+                        <p class="produit-description-2">
+                            C'est un espace essentiel ! Utilisez-le pour 
+                            développer votre titre et attirer l'attention 
+                            du lecteur. Expliquez en quoi consiste cette 
+                            section, partagez quelques détails et donnez juste 
+                            la bonne quantité d'informations pour accrocher 
+                            le public.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="formulaire">
+                <form method="post">
+                    <input type="text" placeholder="Nom Prenom" required>
+                    <input type="text" placeholder="Numero De Telephone" id="phone_number" required>
+                    <input type="text" placeholder="Second Numero De Telephone (optionel)" id="phone_number2">
+
+                    <div class="adresse">
+                        <label for="wilaya">Wilaya:</label>
+                        <select id="wilaya" name="wilaya" required>
+                            <option disabled selected value></option>
+                        </select>
+                        
+                        <label for="commune">Commune:</label>
+                        <select id="commune" name="commune" required>
+                            <option disabled selected value></option>
+                        </select>
+                    </div>
+
+                    <label for="">Quantité: </label>
+                    <input type="number" value="1" min="1">
+                    
+                    <div class="total-price">
+                        <p>Prix final: <span id="price"></span></p>
+                    </div>
+
+                    <div class="errors-box">
+                    </div>
+                    <button type="submit"><i class="fa-solid fa-cart-shopping"></i> acheter</button>
+                </form>
+
+            </div>
+        </section>
+    </div>
+
+    <script src="js/sidebar-menu.js"></script>
+    <script src="js/commande-form.js"></script>
+</body>
+</html>
