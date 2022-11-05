@@ -6,7 +6,7 @@ let wilayat = document.getElementById("wilaya")
 let communes = document.getElementById("commune")
 let errorsBox = document.querySelector(".errors-box")
 
-fetch("/js/Wilaya_Of_Algeria.json" || "https://raw.githubusercontent.com/Ninou01/MarcheBelfort-frontend/main/js/Wilaya_Of_Algeria.json")
+fetch("https://raw.githubusercontent.com/Ninou01/MarcheBelfort-frontend/main/js/Wilaya_Of_Algeria.json")
 .then((result) => result.json())
 .then(data => {
     for (let i = 0; i < data.length; i++) {
@@ -21,7 +21,7 @@ fetch("/js/Wilaya_Of_Algeria.json" || "https://raw.githubusercontent.com/Ninou01
 
 wilayat.addEventListener("change", function () {
     let myArr = []
-    fetch("/js/algeria_cities.json" || "https://raw.githubusercontent.com/Ninou01/MarcheBelfort-frontend/main/js/algeria_cities.json")
+    fetch("https://raw.githubusercontent.com/Ninou01/MarcheBelfort-frontend/main/js/algeria_cities.json")
     .then((result) => result.json())
     .then(data => {
         let wilayaCode = +wilayat.selectedOptions[0].getAttribute("data-wilaya-code")
