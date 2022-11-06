@@ -63,7 +63,7 @@ a {
   color: var(--green);
 }
 
-.price.discount {
+.discount {
   color: #8f8a8a;
   text-decoration: line-through;
 }
