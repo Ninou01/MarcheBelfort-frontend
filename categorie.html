@@ -152,7 +152,33 @@
             </div>
         </section>
     </div>
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <h3 class="title mg-bottom">Marché Belfort</h3>
+                <p>Copyright &copy; <span id="year">2022</span></p>
+            </div>
+            <div class="contact">
+                <p class="mg-bottom">contactez nous sur nos adresses email:</p>
+                <h3>contact@marchebelfort.com</h3>
+                <h3>contact@marchebelfort.com</h3>
+            </div>
 
+            <div>
+                <p class="mg-bottom">ou bien sur nos résaux sociaux:</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        let year = document.getElementById("year")
+        year.textContent = new Date().getFullYear()
+    </script>
     <script src="js/sidebar-menu.js"></script>
 </body>
 </html>

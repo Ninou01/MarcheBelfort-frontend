@@ -96,9 +96,9 @@
                     </div>
                 </div>
                 
-                <div class="formulaire">
+                <div class="formulaire" id="form">
                     <h2>pour commader ce produit veuillez remplire ce formulaire</h2>
-                    <form method="post" id="form">
+                    <form method="post">
                         <input type="text" placeholder="Nom Prenom" required>
                         <input type="text" placeholder="Numero De Telephone" id="phone_number" required>
                         <input type="text" placeholder="Second Numero De Telephone (optionel)" id="phone_number2">
@@ -133,10 +133,42 @@
     
                 </div>
             </div>
-            <a href="#form" class="commande-button display-phone">أطلب الأن</a>
+            <a href="#form" class="commande-button display-phone">Achetez Maintenant</a>
         </section>
-    </div>
+        <div style="position: fixed;z-index: 2;right: 0px;bottom: 0px;width:70px;margin-right: 2.5rem;margin-bottom: 4rem;">
+            <a href="https://api.whatsapp.com/send?phone=213778556117" target="_blank">
+                <img src="https://1.bp.blogspot.com/-F3Sk4v1OJ_I/YTYADzO8wwI/AAAAAAAAM4Y/jMS9-aHC43ImeX4QNexyoKLVSGaR1BRPwCLcBGAsYHQ/s320/whatsapp%2B%25281%2529.png" style="width: 60px;">
+            </a>
+        </div>
 
+    </div>
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <h3 class="title mg-bottom">Marché Belfort</h3>
+                <p>Copyright &copy; <span id="year">2022</span></p>
+            </div>
+            <div class="contact">
+                <p class="mg-bottom">contactez nous sur nos adresses email:</p>
+                <h3>contact@marchebelfort.com</h3>
+                <h3>contact@marchebelfort.com</h3>
+            </div>
+
+            <div>
+                <p class="mg-bottom">ou bien sur nos résaux sociaux:</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        let year = document.getElementById("year")
+        year.textContent = new Date().getFullYear()
+    </script>
     <script src="js/sidebar-menu.js"></script>
     <script src="js/commande-form.js"></script>
 </body>

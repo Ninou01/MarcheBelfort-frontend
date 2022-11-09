@@ -169,14 +169,18 @@ section.produit {
 
 .commande-button {
     padding: 15px 20px;
+    margin-bottom: 10px;
     font-size: 1.3rem;
     font-weight: bold;
     color: #fff;
-    background-color: #007bff;
-    border: 2px solid #0063cc;
+    background-color: #DF0707;
     border-radius: 7px;
     transition: opacity 300ms;
     display: none;
+
+    animation: shake 3000ms 1500ms cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+    transform: translate3d(0, 0, 0);
+    animation-iteration-count: infinite;
 }
 
 @media only screen and (max-width:760px) {
@@ -200,12 +204,14 @@ section.produit {
         left: 20px;
         right: 20px;
         position: fixed;
+        z-index: 2;
         bottom: 0;
         text-align: center;
 
         &.fadeout {
             opacity: 0;
             pointer-events: none;
+            animation: none;
         }
 
         &.fadein {
@@ -214,4 +220,23 @@ section.produit {
     }
 }
 
-
+@keyframes shake {
+    5%, 45% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    10%, 40% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    15%, 25%, 35% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    20%, 30% {
+      transform: translate3d(4px, 0, 0);
+    }
+    45%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+  }

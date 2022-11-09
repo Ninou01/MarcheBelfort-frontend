@@ -112,6 +112,9 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
+  -webkit-box-shadow: 0 5px 3px -3px #fff;
+          box-shadow: 0 5px 3px -3px #fff;
+  padding-bottom: 5px;
 }
 
 nav .menu button {
@@ -205,7 +208,7 @@ nav .menu-overlay {
 }
 
 nav h1 {
-  font-size: 2.8vw;
+  font-size: 30px;
   text-align: center;
 }
 
@@ -219,7 +222,7 @@ nav .logo img {
     display: none;
   }
   nav h1 {
-    font-size: 3vw;
+    font-size: 20px;
   }
   nav .menu-links.scroll::-webkit-scrollbar {
     background-color: #fff;
@@ -257,6 +260,80 @@ nav .logo img {
   nav .menu-links .dropdown.active .categories-dropdown a {
     pointer-events: visible;
   }
+}
+
+body {
+  min-height: 100vh;
+}
+
+footer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100%;
+  background-color: #222;
+  color: white;
+  padding: 50px 60px;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  grid-gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1400px;
+  margin: auto;
+}
+
+footer .title {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+footer .copyright p {
+  font-size: 18px;
+}
+
+footer .mg-bottom {
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 760px) {
+  footer {
+    padding: 40px 60px;
+    padding-bottom: 100px;
+  }
+  footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    grid-gap: 40px;
+  }
+}
+
+.social-media {
+  font-size: 2rem;
+}
+
+.social-media a {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.social-media .fa-facebook:hover {
+  color: #1875ea;
+}
+
+.social-media .fa-instagram:hover {
+  color: #d4465c;
 }
 
 html {
@@ -437,15 +514,21 @@ section.produit {
 
 .commande-button {
   padding: 15px 20px;
+  margin-bottom: 10px;
   font-size: 1.3rem;
   font-weight: bold;
   color: #fff;
-  background-color: #007bff;
-  border: 2px solid #0063cc;
+  background-color: #DF0707;
   border-radius: 7px;
   -webkit-transition: opacity 300ms;
   transition: opacity 300ms;
   display: none;
+  -webkit-animation: shake 3000ms 1500ms cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+          animation: shake 3000ms 1500ms cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 @media only screen and (max-width: 760px) {
@@ -465,14 +548,63 @@ section.produit {
     left: 20px;
     right: 20px;
     position: fixed;
+    z-index: 2;
     bottom: 0;
     text-align: center;
   }
   .commande-button.fadeout {
     opacity: 0;
     pointer-events: none;
+    -webkit-animation: none;
+            animation: none;
   }
   .commande-button.fadein {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes shake {
+  5%, 45% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
+  }
+  10%, 40% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  15%, 25%, 35% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  20%, 30% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+  45%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes shake {
+  5%, 45% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
+  }
+  10%, 40% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  15%, 25%, 35% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  20%, 30% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+  45%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
