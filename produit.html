@@ -65,69 +65,75 @@
         
         <section class="produit">
             <div class="produit-box">
-                <div class="produit-box-left">
+                <div class="produit-details">
                     <h3 class="produit-title">
-                        TITRE DE PRODUIT 
+                        TITRE DE PRODUIT
                     </h3>
                     <div class="poduit-images">
                         <div class="image-to-show">
                             <img src="images/item.jpg" alt="">
                         </div>
                     </div>
-                </div>
-
-                <div class="produit-box-right">
                     <h2 class="produit-price">
                         <span class="discount">25000</span> - <span id="price">24000</span>
                     </h2>
                     <div class="produit-descriptions">
-                        <p class="produit-description-1">
-                            Il s'agit d'une citation de deux lignes
-                            pour une page d'accueil de site Web.
+                        <p class="produit-description-ar">
+                            لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور
+                            أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
+                            أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات . ديواس
+                            أيوتي أريري دولار إن ريبريهينديرأيت فوليوبتاتي فيلايت أيسسي كايلليوم دولار أيو فيجايت
+                            نيولا باراياتيور. أيكسسيبتيور ساينت أوككايكات
                         </p>
-                        <p class="produit-description-2">
-                            C'est un espace essentiel ! Utilisez-le pour 
-                            développer votre titre et attirer l'attention 
-                            du lecteur. Expliquez en quoi consiste cette 
-                            section, partagez quelques détails et donnez juste 
-                            la bonne quantité d'informations pour accrocher 
+                        <p class="produit-description-fr">
+                            C'est un espace essentiel ! Utilisez-le pour
+                            développer votre titre et attirer l'attention
+                            du lecteur. Expliquez en quoi consiste cette
+                            section, partagez quelques détails et donnez juste
+                            la bonne quantité d'informations pour accrocher
                             le public.
                         </p>
                     </div>
                 </div>
                 
-            </div>
-            <div class="formulaire">
-                <form method="post">
-                    <input type="text" placeholder="Nom Prenom" required>
-                    <input type="text" placeholder="Numero De Telephone" id="phone_number" required>
-                    <input type="text" placeholder="Second Numero De Telephone (optionel)" id="phone_number2">
-
-                    <div class="adresse">
-                        <label for="wilaya">Wilaya:</label>
-                        <select id="wilaya" name="wilaya" required>
-                            <option disabled selected value></option>
-                        </select>
+                <div class="formulaire">
+                    <h2>pour commader ce produit veuillez remplire ce formulaire</h2>
+                    <form method="post" id="form">
+                        <input type="text" placeholder="Nom Prenom" required>
+                        <input type="text" placeholder="Numero De Telephone" id="phone_number" required>
+                        <input type="text" placeholder="Second Numero De Telephone (optionel)" id="phone_number2">
+    
+                        <div class="adresse">
+                            <div class="select-box wilaya">
+                                <label for="wilaya">Wilaya:</label>
+                                <select id="wilaya" name="wilaya" required>
+                                    <option disabled selected value></option>
+                                </select>
+                            </div>
+                            
+                            <div class="select-box commune">
+                                <label for="commune">Commune:</label>
+                                <select id="commune" name="commune" required>
+                                    <option disabled selected value></option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <label for="">Quantité: </label>
+                        <input type="number" value="1" min="1">
                         
-                        <label for="commune">Commune:</label>
-                        <select id="commune" name="commune" required>
-                            <option disabled selected value></option>
-                        </select>
-                    </div>
-
-                    <label for="">Quantité: </label>
-                    <input type="number" value="1" min="1">
-                    
-                    <div class="total-price">
-                        <p>Prix final: <span id="total-price"></span></p>
-                    </div>
-
-                    <div class="errors-box">
-                    </div>
-                    <button type="submit"><i class="fa-solid fa-cart-shopping"></i> acheter</button>
-                </form>
-
+                        <div class="total-price">
+                            <p>Prix final: <span id="total-price"></span></p>
+                        </div>
+    
+                        <div class="errors-box">
+                        </div>
+                        <button type="submit"><i class="fa-solid fa-cart-shopping"></i> acheter</button>
+                    </form>
+    
+                </div>
             </div>
+            <a href="#form" class="commande-button display-phone">أطلب الأن</a>
         </section>
     </div>
 

@@ -1,58 +1,74 @@
-section {
-    margin-bottom: 200px;
+html {
+    scroll-behavior: smooth;
 }
+
+section.produit {
+    margin-bottom: 100px;
+}
+
 .produit-box {
     display: flex;
+    align-items: center;
 
-    &-left {
-        flex-basis: 40%;
-        text-align: center;
+    .produit-details, .formulaire {
+        flex-basis: 50%;
+    }
+}
 
-        .produit-title {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
+.produit-details {
+    padding-right: 30px;
+    margin-bottom: 30px;
+}
 
-        .poduit-images {
-            .image-to-show > img {
-                width: 80%;
-            }
+.produit-title {
+    font-size: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.poduit-images {
+    margin-bottom: 15px;
+
+    .image-to-show {
+        width: auto;
+        max-width: 450px;
+        margin: auto;
+
+        & > img {
+            width: 100%;
         }
     }
+}
 
-    &-right {
-        flex-basis: 40%;
+.produit-price {
+    color: var(--green);
+    font-size: 35px;
+    margin-bottom: 10px;
 
-        .produit-price {
-            color: var(--green);
-            font-size: 55px;
-            margin: 50px 0px;
+    &::after {
+        content: "DA";
+    }
+}
 
-            &::after {
-                content: "DA";
-            }
-        }
-
-        .produit-descriptions {
-            .produit-description-1, 
-            .produit-description-2 {
-                margin-bottom: var(--mg-bottom);
-            }
-            .produit-description-1 {
-                font-size: 30px;
-            }
-
-            .produit-description-2 {
-                line-height: 20px;
-            }
-        }
+.produit-descriptions {
+    .produit-description-ar, 
+    .produit-description-fr {
+        margin-bottom: 15px;
+    }
+    .produit-description-ar {
+        direction: rtl;
     }
 }
 
 .formulaire {
     margin-left: auto;
-    width: auto;
-    max-width: 680px;
+    width: fit-content;
+    text-transform: capitalize;
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 32px;
+    }
 
     input {
         border: none;
@@ -70,7 +86,8 @@ section {
         display: block;
         padding: 5px 10px;
         border-radius: 10px;
-        width: 500px;
+        width: 100%;
+        max-width: 500px;
         font-size: 16px;
     }
 
@@ -88,6 +105,11 @@ section {
         &[name="wilaya"] {
             margin-right: 10px;
         }
+    }
+
+    .select-box {
+        display: inline-block;
+        margin-bottom: 15px;
     }
 
     input[type="number"] {
@@ -145,23 +167,48 @@ section {
     }
 }
 
+.commande-button {
+    padding: 15px 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: 2px solid #0063cc;
+    border-radius: 7px;
+    transition: opacity 300ms;
+    display: none;
+}
+
 @media only screen and (max-width:760px) {
 
     .produit-box {
         display: block;
+
+        .produit-details {
+            padding: 0;
+        }
     }
     
     .formulaire {
         margin: auto;
         max-width: auto;
+    }
 
-        input[type="text"] {
-            width: 320px;
+    .commande-button {
+        opacity: 0;
+        display: block;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+
+        &.fadeout {
+            opacity: 0;
+            pointer-events: none;
         }
 
-        select[name="wilaya"] {
-            margin-right: 50px;
-            margin-bottom: 15px;
+        &.fadein {
+            opacity: 1;
         }
     }
 }

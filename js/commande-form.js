@@ -84,3 +84,30 @@ form.addEventListener("submit", (e) => {
       }, "10000")
 })
 
+// for more information about what's going on here check:
+// https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+const commandeButton = document.getElementsByClassName("commande-button")[0]
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: .5,
+}
+
+const handleINtersect = function (entries, observer) {
+    if (entries[0].intersectionRatio < 0.5 || 
+        entries[0].intersectionRatio > 1.3) {
+        console.log("invisible")
+        commandeButton.classList.add("fadein")
+        commandeButton.classList.remove("fadeout")
+        
+    } else {
+        commandeButton.classList.remove("fadein")
+        commandeButton.classList.add("fadeout")
+        console.log("visible")
+    }
+}
+
+const observer = new IntersectionObserver(handleINtersect, options)
+observer.observe(document.getElementById("form"))
+
+
