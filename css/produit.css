@@ -665,7 +665,7 @@ section.produit {
 
 .popup-card {
   position: relative;
-  height: 120px;
+  height: 140px;
   width: 250px;
   padding: 10px;
   border-radius: 5px;
@@ -698,7 +698,12 @@ section.produit {
 }
 
 .popup-message {
-  padding-top: 20px;
+  padding-top: 7px;
+}
+
+.popup-message span {
+  display: block;
+  margin-bottom: 5px;
 }
 
 @media only screen and (max-width: 760px) {

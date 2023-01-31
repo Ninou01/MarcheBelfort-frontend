@@ -100,7 +100,10 @@ const insertPopup = () => {
         <img src="images/check.png" alt="check-icon">
         </span>
         <p class="popup-message">
-        تم تسجيل طلبك بنجاح
+            <span>
+            تمت العملية بنجاح 
+            </span>
+            سيتصل بك احد اعواننا لتأكد من معلومات و اعطائك تفاصيل اكثر
         </p>
         <button class="btn popup-close" onClick="deletePopup()">إغلاق</button>
         </div>
