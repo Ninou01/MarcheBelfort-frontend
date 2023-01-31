@@ -65,3 +65,14 @@ a {
     color: #8f8a8a;
     text-decoration: line-through;
 }
+
+.message-success {
+    color: #fafafa;
+    background-color: #81c784;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 2rem;
+    border: 1px solid transparent;
+    border-radius: .5rem;
+    font-weight: bold;
+}

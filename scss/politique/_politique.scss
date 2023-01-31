@@ -1,0 +1,25 @@
+.politique {
+    margin: 0 0 50px;
+    direction: rtl;
+
+    h3 {
+        margin: 30px 0 11px;
+    
+        &.under-line {
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        margin-bottom: 15px;
+        font-size: 19.5px;
+        line-height: 25px;
+    }
+
+    li {
+        list-style: disc;
+        margin: 5px 0;
+    }
+}
+
+

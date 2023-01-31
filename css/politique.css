@@ -276,40 +276,6 @@ nav .logo img {
   }
 }
 
-.item {
-  text-align: center;
-  width: auto;
-  max-width: 350px;
-  margin: auto;
-  padding-bottom: 10px;
-  background-color: var(--white);
-  color: var(--black);
-  border-radius: 15px;
-  -webkit-transition: -webkit-transform 300ms;
-  transition: -webkit-transform 300ms;
-  transition: transform 300ms;
-  transition: transform 300ms, -webkit-transform 300ms;
-  -webkit-box-shadow: 0 0 7px var(--black);
-          box-shadow: 0 0 7px var(--black);
-}
-
-.item:hover {
-  -webkit-transform: scale(1.04);
-          transform: scale(1.04);
-}
-
-.item img {
-  border-radius: 15px 15px 0 0;
-  width: 100%;
-}
-
-.item-name {
-  margin: 10px 0;
-  font-size: 25px;
-  font-weight: 400;
-  display: inline-block;
-}
-
 body {
   min-height: 100vh;
 }
@@ -384,41 +350,26 @@ footer .mg-bottom {
   color: #d4465c;
 }
 
-.banniere {
-  height: 200px;
-  margin-bottom: var(--mg-bottom);
+.politique {
+  margin: 0 0 50px;
+  direction: rtl;
 }
 
-.banniere-desktop, .banniere-mobile {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.politique h3 {
+  margin: 30px 0 11px;
 }
 
-section.categorie {
-  margin-bottom: var(--mg-bottom);
+.politique h3.under-line {
+  text-decoration: underline;
 }
 
-section.categorie .categorie-title {
-  font-size: 3.5rem;
-  text-align: center;
-  margin-bottom: var(--mg-bottom);
+.politique p {
+  margin-bottom: 15px;
+  font-size: 19.5px;
+  line-height: 25px;
 }
 
-section.categorie .categorie-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
-}
-
-@media only screen and (max-width: 760px) {
-  .categorie-items {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .banniere {
-    height: 150px;
-  }
+.politique li {
+  list-style: disc;
+  margin: 5px 0;
 }

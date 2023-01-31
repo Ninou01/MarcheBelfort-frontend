@@ -55,8 +55,9 @@ quantité.addEventListener("keyup", () => {
 form.addEventListener("submit", (e) => {
     
     // quantity validator
+    let formValide = true;
     if (quantité.value <= 0) {
-        e.preventDefault()
+        formValide = false
         let error = document.createElement("li")
         error.textContent = "quantité invalide"
         errorsBox.append(error)
@@ -69,7 +70,7 @@ form.addEventListener("submit", (e) => {
     const phone_number2 = form.querySelector("#phone_number2")
     if (!reg.test(phone_number.value.trim()) || 
     (!reg.test(phone_number2.value.trim()) && phone_number2.value !=="")) {
-        e.preventDefault()
+        formValide = false
         let error = document.createElement("li")
         error.textContent = "numero de telephone invalide"
         errorsBox.append(error)
@@ -77,12 +78,49 @@ form.addEventListener("submit", (e) => {
     }
 
     // delete error messages after 10s
+    if (formValide == false) {
+        e.preventDefault()
+    } else {
+        insertPopup()
+        e.preventDefault()
+    }
     setTimeout(() => {
         errorsBox.innerHTML = ""
         errorsBox.classList.remove("visible")
         
       }, "10000")
 })
+
+const insertPopup = () => {
+    let popup = document.createElement("div")
+    popup.classList.add("popup")
+    popup.innerHTML = `
+        <div class="popup-card">
+        <span class="check-icon">
+        <img src="images/check.png" alt="check-icon">
+        </span>
+        <p class="popup-message">
+        تم تسجيل طلبك بنجاح
+        </p>
+        <button class="btn popup-close" onClick="deletePopup()">إغلاق</button>
+        </div>
+    `
+    let footer = document.getElementsByTagName("footer")[0]
+    footer.before(popup)
+    popup.classList.add("fade-in")
+    document.body.style.overflow = "hidden"
+    document.body.style.height = "100vh"
+}
+const deletePopup = () => {
+    const popup = document.getElementsByClassName("popup")[0]
+    popup.classList.add("fade-out")
+    form.reset()
+    setTimeout(() =>{ 
+        popup.remove()
+        document.body.style.overflow = ""
+        document.body.style.height = ""
+    }, "200")
+}
 
 // for more information about what's going on here check:
 // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
@@ -96,14 +134,12 @@ const options = {
 const handleINtersect = function (entries, observer) {
     if (entries[0].intersectionRatio < 0.5 || 
         entries[0].intersectionRatio > 1.3) {
-        console.log("invisible")
         commandeButton.classList.add("fadein")
         commandeButton.classList.remove("fadeout")
         
     } else {
         commandeButton.classList.remove("fadein")
         commandeButton.classList.add("fadeout")
-        console.log("visible")
     }
 }
 
