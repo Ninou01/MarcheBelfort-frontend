@@ -103,7 +103,7 @@ const insertPopup = () => {
             <span>
             تمت العملية بنجاح 
             </span>
-            سيتصل بك احد اعواننا لتأكد من معلومات و اعطائك تفاصيل اكثر
+            سيتصل بك احد اعواننا لتأكد من المعلومات و اعطائك تفاصيل اكثر
         </p>
         <button class="btn popup-close" onClick="deletePopup()">إغلاق</button>
         </div>
