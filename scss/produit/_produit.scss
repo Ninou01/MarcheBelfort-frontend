@@ -158,7 +158,7 @@ section.produit {
 
     input[type="text"] {
         display: block;
-        padding: 5px 10px;
+        padding: 10px 10px;
         border-radius: 10px;
         width: 100%;
         max-width: 500px;
@@ -170,20 +170,21 @@ section.produit {
         font-weight: bold;
     }
 
-    select {
-        width: 155px;
-        border-radius: 5px;
-        padding: 5px;
-        margin-left: 5px;
-
-        &[name="wilaya"] {
-            margin-right: 10px;
+    .adresse {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        justify-content: space-between;
+        & > * {
+            width: 48%;
         }
-    }
 
-    .select-box {
-        display: inline-block;
-        margin-bottom: 15px;
+        select {
+            width: 100%;
+            padding: 10px 10px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
     }
 
     input[type="number"] {
@@ -219,6 +220,7 @@ section.produit {
         border-radius: 21px;
         cursor: pointer;
         border: none;
+        text-align: center;
     }
 
     .errors-box {
@@ -346,6 +348,15 @@ section.produit {
 
         &.fadein {
             opacity: 1;
+        }
+    }
+    .popup-card {
+        height: 220px;
+        .check-icon {
+            position: absolute;
+            top: -30%;
+            left: 50%;
+            transform: translate(-50%, 50%);
         }
     }
 }

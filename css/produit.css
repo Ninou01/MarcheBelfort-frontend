@@ -736,6 +736,16 @@ section.produit {
   .commande-button.fadein {
     opacity: 1;
   }
+  .popup-card {
+    height: 220px;
+  }
+  .popup-card .check-icon {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+  }
 }
 
 @-webkit-keyframes shake {

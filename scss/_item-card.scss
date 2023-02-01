@@ -1,6 +1,8 @@
 .item {
+    position: relative;
     text-align: center;
-    width: auto;
+    min-height: 410px;
+    width: 350px;
     max-width: 350px;
     margin: auto;
     padding-bottom: 10px;
@@ -17,6 +19,8 @@
     img {
         border-radius: 15px 15px 0 0;
         width: 100%;
+        height: auto;
+        max-height: 270px;
     }
 
     &-name {
@@ -24,5 +28,17 @@
         font-size: 25px;
         font-weight: 400;
         display: inline-block;
+    }
+
+    &-price {
+        margin-bottom: 30px;
+    }
+
+    button {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 22px;
     }
 }
