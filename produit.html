@@ -27,44 +27,44 @@
     <div class="container">
       <header>
         <nav>
-          <div class="menu">
-            <button><i class="fa-solid fa-bars"></i></button>
-            <div class="menu-sidebar">
-              <div class="menu-links">
-                <a href="" class="menu-link">page principale</a>
-                <a href="" class="menu-link">politique de confidentialité</a>
-                <a href="" class="menu-link">Politique de retour</a>
-                <a href="" class="menu-link">contactez nous</a>
-                <div class="dropdown">
-                  <div class="select">
-                    <span class="selected">categories</span>
-                    <div class="caret"></div>
-                  </div>
-                  <ul class="categories-dropdown">
-                    <li><a href="#" class="menu-link">Telephone</a></li>
-                    <li><a href="#" class="menu-link">ordinateur</a></li>
-                    <li><a href="#" class="menu-link">console</a></li>
-                    <li><a href="#" class="menu-link">Accessoir mobile</a></li>
-                    <li><a href="#" class="menu-link">Tablets</a></li>
-                  </ul>
+            <div class="menu">
+                <button><i class="fa-solid fa-bars"></i></button>
+                <div class="menu-sidebar">
+                    <div class="menu-links">
+                        <a href="" class="menu-link">الصفحة الرئيسية</a>
+                        <a href="" class="menu-link">سياسة الخصوصية و الإرجاع</a>
+                        <div class="dropdown">
+                            <div class="select">
+                                <span class="selected">الفئات</span>
+                                <div class="caret"></div>
+                            </div>
+                            <ul class="categories-dropdown">
+                                <li><a href="#" class="menu-link">Telephone</a></li>
+                                <li><a href="#" class="menu-link">ordinateur</a></li>
+                                <li><a href="#" class="menu-link">console</a></li>
+                                <li><a href="#" class="menu-link">Accessoir mobile</a></li>
+                                <li><a href="#" class="menu-link">Tablets</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-overlay"></div>
                 </div>
-              </div>
-              <div class="menu-overlay"></div>
             </div>
-          </div>
-          <h1>première platforme de e-commerce specialisé en telephone</h1>
-          <div class="logo">
-            <a href="#"><img src="images/logo.jpg" alt="logo" /></a>
-          </div>
+            <h1>
+                أول منصة مخصصة لبيع الهواتف و لاكسسوار
+            </h1>
+            <div class="logo">
+                <a href="#"><img src="images/logo.jpg" alt="logo"></a>
+            </div>
         </nav>
         <div class="categories-liste">
-          <ul>
-            <li><a href="#">Telephone</a></li>
-            <li><a href="#">ordinateur</a></li>
-            <li><a href="#">console</a></li>
-            <li><a href="#">Accessoir mobile</a></li>
-            <li><a href="#">Tablets</a></li>
-          </ul>
+            <ul>
+                <li><a href="#">Telephone</a></li>
+                <li><a href="#">ordinateur</a></li>
+                <li><a href="#">console</a></li>
+                <li><a href="#">Accessoir mobile</a></li>
+                <li><a href="#">Tablets</a></li>
+            </ul>
         </div>
       </header>
 
@@ -130,53 +130,47 @@
           </div>
 
           <div class="formulaire" id="form">
-            <h2>pour commader ce produit veuillez remplire ce formulaire</h2>
+            <h2>لطلب هذا المنتج املاء الإستمارة التالية</h2>
             <form method="post">
-              <input type="text" placeholder="Nom Prenom" required />
-              <input
-                type="text"
-                placeholder="Numero De Telephone"
-                id="phone_number"
-                required
-              />
-              <input
-                type="text"
-                placeholder="Second Numero De Telephone (optionel)"
-                id="phone_number2"
-              />
+              <input name="nom" type="text" placeholder="الاسم و اللقب" required>
+              <input name="numero_telephone1" type="text" placeholder="رقم الهتف" id="phone_number" required>
+              <input name="numero_telephone2" type="text" placeholder="رقم الهاتف الثاني (إختياري)" id="phone_number2">
+
 
               <div class="adresse">
                 <div class="select-box wilaya">
-                  <label for="wilaya">Wilaya:</label>
-                  <select id="wilaya" name="wilaya" required>
-                    <option disabled selected value></option>
-                  </select>
+                    <select id="wilaya" name="wilaya" required>
+                        <option disabled selected value>الولاية</option>
+                    </select>
                 </div>
-
+                
                 <div class="select-box commune">
-                  <label for="commune">Commune:</label>
-                  <select id="commune" name="commune" required>
-                    <option disabled selected value></option>
-                  </select>
+                    <select id="commune" name="commune" required>
+                        <option disabled selected value>المقاعة</option>
+                    </select>
                 </div>
-              </div>
+            </div>
 
-              <label for="">Quantité: </label>
+            <div class="coupon">
+                <input name="coupon" type="text" placeholder="كود خصم (إختياري)" id="coupon">
+            </div>
+
+              <label for="">الكمية: </label>
               <input type="number" value="1" min="1" />
 
               <div class="total-price">
-                <p>Prix final: <span id="total-price"></span></p>
+                <p>السعر النهائي: <span id="total-price"></span></p>
               </div>
 
               <div class="errors-box"></div>
               <button type="submit">
-                <i class="fa-solid fa-cart-shopping"></i> acheter
+               شراء <i class="fa-solid fa-cart-shopping"></i>
               </button>
             </form>
           </div>
         </div>
         <a href="#form" class="commande-button display-phone"
-          >Achetez Maintenant</a
+          >اشتر الأن</a
         >
       </section>
       <div
@@ -203,27 +197,24 @@
     </div>
     <footer>
       <div class="container">
-        <div class="copyright">
-          <h3 class="title mg-bottom">Marché Belfort</h3>
-          <p>Copyright &copy; <span id="year">2022</span></p>
-        </div>
-        <div class="contact">
-          <p class="mg-bottom">contactez nous sur nos adresses email:</p>
-          <h3>contact@marchebelfort.com</h3>
-          <h3>contact@marchebelfort.com</h3>
-        </div>
-
-        <div>
-          <p class="mg-bottom">ou bien sur nos résaux sociaux:</p>
-          <div class="social-media">
-            <a href="https://www.facebook.com/" target="_blank"
-              ><i class="fab fa-facebook"></i
-            ></a>
-            <a href="https://www.instagram.com/" target="_blank"
-              ><i class="fab fa-instagram"></i
-            ></a>
+          <div class="copyright">
+              <h3 class="title mg-bottom">Marché Belfort</h3>
+              <p>Copyright &copy; <span id="year">2022</span></p>
           </div>
-        </div>
+          <div class="contact">
+              <p class="mg-bottom">تواصل معنا عبر بريدناالإلكتروني:</p>
+              <h3>support@marchebelfort.com</h3>
+              <h3>contact@marchebelfort.com</h3>
+          </div>
+
+          <div>
+              <p class="mg-bottom">او عبر ماواقع التواصل الإجتماعي:</p>
+              <div class="social-media">
+                  <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+              </div>
+          </div>
+
       </div>
     </footer>
 

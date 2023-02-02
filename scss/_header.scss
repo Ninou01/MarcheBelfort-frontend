@@ -81,7 +81,7 @@ nav {
         &-links, &-overlay {
             position: fixed;
             top: 0;
-            left: 0;
+            right: 0;
             bottom: 0;
         }
 
@@ -91,7 +91,7 @@ nav {
             padding-top: 46px;
             width: 250px;
             z-index: 2;
-            transform: translateX(-250px);
+            transform: translateX(250px);
             transition: transform 300ms;
             
             overflow-y: scroll;
@@ -117,7 +117,7 @@ nav {
         &-overlay {
             background-color: #0000008f;
             z-index: 1;
-            right: 0;
+            left: 0;
             opacity: 0;
             visibility: hidden;
         }

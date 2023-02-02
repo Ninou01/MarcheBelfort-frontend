@@ -20,6 +20,7 @@
 }
 
 body {
+  direction: rtl;
   color: var(--white);
   background-color: var(--primary-color);
   font-family: 'League Spartan', sans-serif;
@@ -56,6 +57,7 @@ a {
 }
 
 .price {
+  direction: ltr;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -176,7 +178,7 @@ nav .menu-sidebar.visible .menu-overlay {
 nav .menu-links, nav .menu-overlay {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
 }
 
@@ -186,8 +188,8 @@ nav .menu-links {
   padding-top: 46px;
   width: 250px;
   z-index: 2;
-  -webkit-transform: translateX(-250px);
-          transform: translateX(-250px);
+  -webkit-transform: translateX(250px);
+          transform: translateX(250px);
   -webkit-transition: -webkit-transform 300ms;
   transition: -webkit-transform 300ms;
   transition: transform 300ms;
@@ -216,7 +218,7 @@ nav .menu a.menu-link:hover {
 nav .menu-overlay {
   background-color: #0000008f;
   z-index: 1;
-  right: 0;
+  left: 0;
   opacity: 0;
   visibility: hidden;
 }
@@ -477,6 +479,8 @@ section.produit {
 }
 
 .produit-price {
+  text-align: right;
+  direction: ltr;
   color: var(--green);
   font-size: 35px;
   margin-bottom: 10px;
@@ -523,7 +527,7 @@ section.produit {
 
 .formulaire input[type="text"] {
   display: block;
-  padding: 5px 10px;
+  padding: 10px 10px;
   border-radius: 10px;
   width: 100%;
   max-width: 500px;
@@ -535,20 +539,26 @@ section.produit {
   font-weight: bold;
 }
 
-.formulaire select {
-  width: 155px;
-  border-radius: 5px;
-  padding: 5px;
-  margin-left: 5px;
+.formulaire .adresse {
+  width: 100%;
+  max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.formulaire select[name="wilaya"] {
-  margin-right: 10px;
+.formulaire .adresse > * {
+  width: 48%;
 }
 
-.formulaire .select-box {
-  display: inline-block;
-  margin-bottom: 15px;
+.formulaire .adresse select {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .formulaire input[type="number"] {
@@ -585,6 +595,7 @@ section.produit {
   border-radius: 21px;
   cursor: pointer;
   border: none;
+  text-align: center;
 }
 
 .formulaire .errors-box {

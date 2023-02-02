@@ -114,6 +114,8 @@ section.produit {
 }
 
 .produit-price {
+    text-align: right;
+    direction: ltr;
     color: var(--green);
     font-size: 35px;
     margin-bottom: 10px;

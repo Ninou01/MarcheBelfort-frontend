@@ -18,6 +18,7 @@
 }
 
 body {
+    direction: rtl;
     color: var(--white);
     background-color: var(--primary-color);
     font-family: 'League Spartan', sans-serif;
@@ -54,6 +55,7 @@ a {
 }
 
 .price {
+    direction: ltr;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 15px;

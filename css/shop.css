@@ -20,6 +20,7 @@
 }
 
 body {
+  direction: rtl;
   color: var(--white);
   background-color: var(--primary-color);
   font-family: 'League Spartan', sans-serif;
@@ -56,6 +57,7 @@ a {
 }
 
 .price {
+  direction: ltr;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -176,7 +178,7 @@ nav .menu-sidebar.visible .menu-overlay {
 nav .menu-links, nav .menu-overlay {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
 }
 
@@ -186,8 +188,8 @@ nav .menu-links {
   padding-top: 46px;
   width: 250px;
   z-index: 2;
-  -webkit-transform: translateX(-250px);
-          transform: translateX(-250px);
+  -webkit-transform: translateX(250px);
+          transform: translateX(250px);
   -webkit-transition: -webkit-transform 300ms;
   transition: -webkit-transform 300ms;
   transition: transform 300ms;
@@ -216,7 +218,7 @@ nav .menu a.menu-link:hover {
 nav .menu-overlay {
   background-color: #0000008f;
   z-index: 1;
-  right: 0;
+  left: 0;
   opacity: 0;
   visibility: hidden;
 }
@@ -277,8 +279,10 @@ nav .logo img {
 }
 
 .item {
+  position: relative;
   text-align: center;
-  width: auto;
+  min-height: 410px;
+  width: 350px;
   max-width: 350px;
   margin: auto;
   padding-bottom: 10px;
@@ -301,6 +305,8 @@ nav .logo img {
 .item img {
   border-radius: 15px 15px 0 0;
   width: 100%;
+  height: auto;
+  max-height: 270px;
 }
 
 .item-name {
@@ -308,6 +314,19 @@ nav .logo img {
   font-size: 25px;
   font-weight: 400;
   display: inline-block;
+}
+
+.item-price {
+  margin-bottom: 30px;
+}
+
+.item button {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 22px;
 }
 
 body {
